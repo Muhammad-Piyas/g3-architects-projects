@@ -11,6 +11,21 @@
  .display{
   display: flex ;
  }
+ .text-parimary{
+  color: #FF900E;
+ }
+
+ main{
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-top: 100PX;
+ }
+
+ .section-title{
+  font-weight: 700;
+  font-size: 2.7rem;
+  margin-bottom: 26px;
+}
 
  .btn-primary{
   background-color: #FF900E;
@@ -87,11 +102,53 @@
 
 .banner-image{
   width: 100%;
+  margin-bottom: 35px;
+}
+
+/* team and feature related styls */
+.teams{
+  align-items: center;
+}
+
+.team-img-cotainer{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.our-features{
+  margin-left: 73px;
+  max-width: 537px;
+}
+
+#quick-list{
+  font-weight: 500;
+}
+.features-description{
+  margin-bottom: 32px;
 }
 
 /* responsive media query */
-@media screen and (max-width: 575px) {
-  .navbar, .nav-links{
+@media screen and (max-width: 576px) {
+  .navbar, .nav-links, .teams{
     flex-direction: column;
+  }
+
+  .team-img-cotainer{
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .our-features{
+    margin-left: 20px;
+  }
+}
+
+/* medium size device */
+@media screen and (min-width: 576px) and (max-width: 992px){
+  .teams{
+    flex-direction: column;
+  }
+  .our-features{
+    margin-left: 50px auto;
   }
 }
